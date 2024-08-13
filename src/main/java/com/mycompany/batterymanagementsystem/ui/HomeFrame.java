@@ -5,6 +5,8 @@
  */
 package com.mycompany.batterymanagementsystem.ui;
 
+import com.mycompany.batterymanagementsystem.controller.CellVoltageController;
+import com.mycompany.batterymanagementsystem.model.CellVoltageModel;
 import javax.swing.JFrame;
 
 /**
@@ -41,8 +43,11 @@ public class HomeFrame extends javax.swing.JFrame {
         BMSInformationPanel = new javax.swing.JPanel();
         CellVoltagePanel = new javax.swing.JPanel();
         MaxVoltagePanel = new javax.swing.JPanel();
+        MaxVoltageLabel = new javax.swing.JLabel();
         MinVoltagePanel = new javax.swing.JPanel();
+        MinVoltageLabel = new javax.swing.JLabel();
         VoltageDifferencePanel = new javax.swing.JPanel();
+        VoltageDifferenceLabel = new javax.swing.JLabel();
         BatteryInformationPanel = new javax.swing.JPanel();
         TempreatureInformationPanel = new javax.swing.JPanel();
         PortConfigPanel = new javax.swing.JPanel();
@@ -64,7 +69,7 @@ public class HomeFrame extends javax.swing.JFrame {
             MeterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MeterPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(gaugeChart, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                .addComponent(gaugeChart, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
                 .addContainerGap())
         );
         MeterPanelLayout.setVerticalGroup(
@@ -88,7 +93,7 @@ public class HomeFrame extends javax.swing.JFrame {
             BatteryVoltagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BatteryVoltagePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(BatteryVoltageTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addComponent(BatteryVoltageTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
                 .addContainerGap())
         );
         BatteryVoltagePanelLayout.setVerticalGroup(
@@ -167,15 +172,23 @@ public class HomeFrame extends javax.swing.JFrame {
 
         MaxVoltagePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Max Voltage"));
 
+        MaxVoltageLabel.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout MaxVoltagePanelLayout = new javax.swing.GroupLayout(MaxVoltagePanel);
         MaxVoltagePanel.setLayout(MaxVoltagePanelLayout);
         MaxVoltagePanelLayout.setHorizontalGroup(
             MaxVoltagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 97, Short.MAX_VALUE)
+            .addGroup(MaxVoltagePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MaxVoltageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         MaxVoltagePanelLayout.setVerticalGroup(
             MaxVoltagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(MaxVoltagePanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(MaxVoltageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         MinVoltagePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Min Voltage"));
@@ -184,11 +197,17 @@ public class HomeFrame extends javax.swing.JFrame {
         MinVoltagePanel.setLayout(MinVoltagePanelLayout);
         MinVoltagePanelLayout.setHorizontalGroup(
             MinVoltagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 111, Short.MAX_VALUE)
+            .addGroup(MinVoltagePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MinVoltageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                .addContainerGap())
         );
         MinVoltagePanelLayout.setVerticalGroup(
             MinVoltagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(MinVoltagePanelLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(MinVoltageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         VoltageDifferencePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Voltage Difference"));
@@ -197,11 +216,17 @@ public class HomeFrame extends javax.swing.JFrame {
         VoltageDifferencePanel.setLayout(VoltageDifferencePanelLayout);
         VoltageDifferencePanelLayout.setHorizontalGroup(
             VoltageDifferencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(VoltageDifferencePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(VoltageDifferenceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         VoltageDifferencePanelLayout.setVerticalGroup(
             VoltageDifferencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(VoltageDifferencePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(VoltageDifferenceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout CellVoltagePanelLayout = new javax.swing.GroupLayout(CellVoltagePanel);
@@ -236,7 +261,7 @@ public class HomeFrame extends javax.swing.JFrame {
         BatteryInformationPanel.setLayout(BatteryInformationPanelLayout);
         BatteryInformationPanelLayout.setHorizontalGroup(
             BatteryInformationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 179, Short.MAX_VALUE)
+            .addGap(0, 166, Short.MAX_VALUE)
         );
         BatteryInformationPanelLayout.setVerticalGroup(
             BatteryInformationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,6 +292,11 @@ public class HomeFrame extends javax.swing.JFrame {
         BoundRateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1200", "2400", "4800", "9600", "19200", "38400", "57600", "115200", " ", " " }));
 
         ConnectButton.setText("Connect");
+        ConnectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConnectButtonActionPerformed(evt);
+            }
+        });
 
         BreakButton.setText("Break");
         BreakButton.addActionListener(new java.awt.event.ActionListener() {
@@ -294,7 +324,7 @@ public class HomeFrame extends javax.swing.JFrame {
                         .addGap(8, 8, 8)
                         .addGroup(PortConfigPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BoundRateComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(COMPortComboBox, 0, 82, Short.MAX_VALUE))
+                            .addComponent(COMPortComboBox, 0, 69, Short.MAX_VALUE))
                         .addContainerGap())))
         );
         PortConfigPanelLayout.setVerticalGroup(
@@ -392,6 +422,9 @@ public class HomeFrame extends javax.swing.JFrame {
 
     private void BreakButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BreakButtonActionPerformed
         // TODO add your handling code here:
+        MaxVoltageLabel.setText(null);
+        MinVoltageLabel.setText(null);
+        VoltageDifferenceLabel.setText(null);
     }//GEN-LAST:event_BreakButtonActionPerformed
 
     private void BatteryVoltageTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatteryVoltageTextFieldActionPerformed
@@ -402,6 +435,16 @@ public class HomeFrame extends javax.swing.JFrame {
     private void BatteryCurrentTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatteryCurrentTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BatteryCurrentTextFieldActionPerformed
+
+    private void ConnectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConnectButtonActionPerformed
+        // TODO add your handling code here:
+        CellVoltageController cellVoltageController = new CellVoltageController();
+        CellVoltageModel model = cellVoltageController.calculateCellVoltage(20.0,10.0);
+        
+        MaxVoltageLabel.setText(Double.toString(model.getMaxVoltage()));
+        MinVoltageLabel.setText(Double.toString(model.getMinVoltage()));
+        VoltageDifferenceLabel.setText(Double.toString(model.getVoltageDiffrence()));
+    }//GEN-LAST:event_ConnectButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -451,14 +494,17 @@ public class HomeFrame extends javax.swing.JFrame {
     private javax.swing.JPanel CellVoltagePanel;
     private javax.swing.JButton ConnectButton;
     private javax.swing.JPanel CurrentPanel;
+    private javax.swing.JLabel MaxVoltageLabel;
     private javax.swing.JPanel MaxVoltagePanel;
     private javax.swing.JPanel MeterPanel;
+    private javax.swing.JLabel MinVoltageLabel;
     private javax.swing.JPanel MinVoltagePanel;
     private javax.swing.JPanel PortConfigPanel;
     private javax.swing.JLabel PortNumLabel;
     private javax.swing.JPanel SyatemStatusPanel;
     private javax.swing.JPanel TargetConfigPanel;
     private javax.swing.JPanel TempreatureInformationPanel;
+    private javax.swing.JLabel VoltageDifferenceLabel;
     private javax.swing.JPanel VoltageDifferencePanel;
     private javax.swing.JPanel WarnAndProtectPanel;
     private com.mycompany.batterymanagementsystem.ui.GaugeChart gaugeChart;
